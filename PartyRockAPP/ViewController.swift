@@ -17,9 +17,22 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
        
         
         let p1 = PartyRock(imageURL: "https://yt3.ggpht.com/-Yn_PpHByTN8/AAAAAAAAAAI/AAAAAAAAAAA/p7Om3nMN3Bk/s88-c-k-no-mo-rj-c0xffffff/photo.jpg", videoURL: "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/JGwWNGJdvx8\" frameborder=\"0\" allowfullscreen></iframe>", videoTitle: "Shape of You")
+        let p2 = PartyRock(imageURL: "https://i.ytimg.com/vi/KrGyD4kHTSE/hqdefault.jpg?custom=true&w=196&h=110&stc=true&jpg444=true&jpgq=90&sp=68&sigh=-v6VQ26b1RCyEcO3d1mkTa9KXy0", videoURL: "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/KrGyD4kHTSE\" frameborder=\"0\" allowfullscreen></iframe>", videoTitle: " Dead man Tells no tales")
+        
+        let p3 = PartyRock(imageURL: "https://i.ytimg.com/vi/zDefqB8juXs/hqdefault.jpg?custom=true&w=246&h=138&stc=true&jpg444=true&jpgq=90&sp=68&sigh=Sp3nXEWBRi01L9QDRKIWlz9xAhQ", videoURL: "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/zDefqB8juXs\" frameborder=\"0\" allowfullscreen></iframe>", videoTitle: "Showkali")
+        let p4 = PartyRock(imageURL: "https://i.ytimg.com/vi/n_fA0hU5-a4/hqdefault.jpg?custom=true&w=168&h=94&stc=true&jpg444=true&jpgq=90&sp=68&sigh=_VabnTH-GySQFLHuV1vzzT0qTYw", videoURL: "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/n_fA0hU5-a4\" frameborder=\"0\" allowfullscreen></iframe>", videoTitle: "Chalmaar")
+        let p5 = PartyRock(imageURL: "https://i.ytimg.com/vi/q-gLRp5bSpw/hqdefault.jpg?custom=true&w=246&h=138&stc=true&jpg444=true&jpgq=90&sp=68&sigh=NWzivEByn3xGxZ7YoDsTNpMWM0k", videoURL: "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/q-gLRp5bSpw\" frameborder=\"0\" allowfullscreen></iframe>", videoTitle: "Sky Fall")
+        
         tableView.delegate = self
+        
         tableView.dataSource = self
         partyRocks.append(p1)
+        partyRocks.append(p2)
+        partyRocks.append(p3)
+        partyRocks.append(p4)
+        partyRocks.append(p5)
+
+        
         
     }
     
