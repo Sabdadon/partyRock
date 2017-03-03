@@ -16,7 +16,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         
        
         
-        let p1 = PartyRock(imageURL: "https://yt3.ggpht.com/-Yn_PpHByTN8/AAAAAAAAAAI/AAAAAAAAAAA/p7Om3nMN3Bk/s88-c-k-no-mo-rj-c0xffffff/photo.jpg", videoURL: "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/JGwWNGJdvx8\" frameborder=\"0\" allowfullscreen></iframe>", videoTitle: "Shape of You")
+        let p1 = PartyRock(imageURL: "https://yt3.ggpht.com/-Yn_PpHByTN8/AAAAAAAAAAI/AAAAAAAAAAA/p7Om3nMN3Bk/s88-c-k-no-mo-rj-c0xffffff/photo.jpg", videoURL: "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/rNeDSn1Octc\" frameborder=\"0\" allowfullscreen></iframe>", videoTitle: "Shape of You")
         let p2 = PartyRock(imageURL: "https://i.ytimg.com/vi/KrGyD4kHTSE/hqdefault.jpg?custom=true&w=196&h=110&stc=true&jpg444=true&jpgq=90&sp=68&sigh=-v6VQ26b1RCyEcO3d1mkTa9KXy0", videoURL: "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/KrGyD4kHTSE\" frameborder=\"0\" allowfullscreen></iframe>", videoTitle: " Dead man Tells no tales")
         
         let p3 = PartyRock(imageURL: "https://i.ytimg.com/vi/zDefqB8juXs/hqdefault.jpg?custom=true&w=246&h=138&stc=true&jpg444=true&jpgq=90&sp=68&sigh=Sp3nXEWBRi01L9QDRKIWlz9xAhQ", videoURL: "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/zDefqB8juXs\" frameborder=\"0\" allowfullscreen></iframe>", videoTitle: "Showkali")
@@ -52,10 +52,19 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         return partyRocks.count
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       
+         let pr = partyRocks[indexPath.row]
+        performSegue(withIdentifier: "VideoVC", sender: pr)
+    }
 
    
-
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? VideoVC {
+        if let party = sender as? PartyRock{
+          destination.partyRock = party
+        }
+    }
+    }
 }
 
